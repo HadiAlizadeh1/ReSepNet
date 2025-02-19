@@ -1,0 +1,250 @@
+<!-- In the name of Allah -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Source Separation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff; /* Change text color for better contrast */
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        section {
+            background: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .audio-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .audio-grid div {
+            text-align: center;
+            padding: 10px;
+            border-left: 2px solid #444; /* Add left border to columns */
+        }
+        .audio-grid div:first-child {
+            border-left: none; /* No border for the first column */
+        }
+        audio {
+            width: 100%;
+            margin-top: 5px;
+            border-radius: 5px;
+            background: #fff; /* Audio control background */
+        }
+        audio::-webkit-media-controls {
+            background-color: #f4f4f4; /* Customize controls */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="10.jpg" alt="" style="max-width: 100%; border-radius: 10px;">
+    <b>In The Name of Allah</b>
+    <h1>ReSepNet</h1>
+    <p>ReSepNet and Other Models in Speech Separation Examples</p>
+</header>
+
+<section>
+    <h2>WSJ0-2mix</h2>
+    
+    <div class="audio-grid">
+        <div>
+            <strong>Mixture</strong>
+            <audio controls><source src="WSJ2/WSJ2_2.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>Ground Truth</strong>
+            <audio controls><source src="WSJ2/g_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ2/g_2_2.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>Conv-TasNet</strong>
+            <audio controls><source src="WSJ2/conv_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ2/conv_2_2.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>DPRNN</strong>
+            <audio controls><source src="WSJ2/DPRNN_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ2/DPRNN_2_2.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>MULCAT</strong>
+            <audio controls><source src="WSJ2/mulcut_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ2/mulcut_2_2.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>ReSepNet</strong>
+            <audio controls><source src="WSJ2/WSJ2_2_s2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ2/WSJ2_2_s1.wav" type="audio/mpeg"></audio>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>WSJ0-3mix</h2>
+    <div class="audio-grid">
+        <div>
+            <strong>Mixture</strong>
+            <audio controls><source src="WSJ3/WSJ3_1.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>Ground Truth</strong>
+            <audio controls><source src="WSJ3/g_1_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ3/g_1_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ3/g_1_3.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>Conv-TasNet</strong>
+            <audio controls><source src="WSJ3/conv_1_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ3/conv_1_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ3/conv_1_3.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>DPRNN</strong>
+            <audio controls><source src="WSJ3/DPRNN_1_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ3/DPRNN_1_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ3/DPRNN_1_3.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>MULCAT</strong>
+            <audio controls><source src="WSJ3/mulcut_1_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ3/mulcut_1_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ3/mulcut_1_3.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>ReSepNet</strong>
+            <audio controls><source src="WSJ3/WSJ3_1_s1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ3/WSJ3_1_s2_run2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ3/WSJ3_1_s1_run2.wav" type="audio/mpeg"></audio>
+        </div>
+    </div>
+
+    
+</section>
+
+
+<section>
+    <h2>WSJ0-4mix</h2>
+    
+    <div class="audio-grid">
+        <div>
+            <strong>Mixture</strong>
+            <audio controls><source src="WSJ4/WSJ4_2.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>Ground Truth</strong>
+            <audio controls><source src="WSJ4/g_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/g_2_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/g_2_3.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/g_2_4.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>Conv-TasNet</strong>
+            <audio controls><source src="WSJ4/conv_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/conv_2_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/conv_2_3.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/conv_2_4.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>DPRNN</strong>
+            <audio controls><source src="WSJ4/DPRNN_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/DPRNN_2_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/DPRNN_2_3.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/DPRNN_2_4.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>MULCAT</strong>
+            <audio controls><source src="WSJ4/mulcut_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/mulcut_2_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/mulcut_2_3.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/mulcut_2_4.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>ReSepNet</strong>
+            <audio controls><source src="WSJ4/WSJ4_2_s1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/WSJ4_2_s2_run3.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/WSJ4_2_s1_run3.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ4/WSJ4_2_s1_run2.wav" type="audio/mpeg"></audio>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <h2>WSJ0-5mix</h2>
+    
+    <div class="audio-grid">
+        <div>
+            <strong>Mix 2</strong>
+            <audio controls><source src="WSJ5/WSJ5_2.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>Ground Truth</strong>
+            <audio controls><source src="WSJ5/g_2_4.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/g_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/g_2_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/g_2_3.wav" type="audio/mpeg"></audio>            
+            <audio controls><source src="WSJ5/g_2_5.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>Conv-TasNet</strong>
+            <audio controls><source src="WSJ5/conv_2_4.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/conv_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/conv_2_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/conv_2_3.wav" type="audio/mpeg"></audio>            
+            <audio controls><source src="WSJ5/conv_2_5.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>DPRNN</strong>
+            <audio controls><source src="WSJ5/DPRNN_2_4.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/DPRNN_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/DPRNN_2_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/DPRNN_2_3.wav" type="audio/mpeg"></audio>            
+            <audio controls><source src="WSJ5/DPRNN_2_5.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>MULCAT</strong>
+            <audio controls><source src="WSJ5/mulcut_2_4.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/mulcut_2_1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/mulcut_2_2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/mulcut_2_3.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/mulcut_2_5.wav" type="audio/mpeg"></audio>
+        </div>
+        <div>
+            <strong>ReSepNet</strong>
+            <audio controls><source src="WSJ5/WSJ5_2_s1_run3.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/WSJ5_2_s2_run4_s2.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/WSJ5_2_s1_run4_s1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/WSJ5_2_s1.wav" type="audio/mpeg"></audio>
+            <audio controls><source src="WSJ5/WSJ5_2_s1_run2.wav" type="audio/mpeg"></audio>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
