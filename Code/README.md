@@ -14,7 +14,7 @@ This repository contains the implementation for our **Interspeech 2025** paper:
 * [x] Create Environment
 * [x] Data Pre-processing
 * [x] Training
-* [x] Inference
+* [x] Evaluation
 * [x] Separate
 
 ---
