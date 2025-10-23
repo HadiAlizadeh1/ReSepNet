@@ -69,7 +69,7 @@ python preprocess3.py --in-dir /data/min --out-dir data --sample-rate 8000
 
 ## Training
 
-To start training:
+To start training, use the paths of the data created in the Data Preparation step:
 ```bash
 python train2.py --train_dir2 2spk/tr --valid_dir2 2spk/cv --train_dir3 3spk/tr --valid_dir3 3spk/cv 
 ```
