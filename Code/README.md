@@ -70,15 +70,8 @@ python preprocess3.py --in-dir /data/min --out-dir data --sample-rate 8000
 ## Training
 
 To start training:
-
 ```bash
-python train.py
-```
-
-If you changed the `--out-dir` during preprocessing, specify your dataset paths:
-
-```bash
-python train.py --train_dir 'data/tr' --valid_dir 'data/cv'
+python train2.py --train_dir2 2spk/tr --valid_dir2 2spk/cv --train_dir3 3spk/tr --valid_dir3 3spk/cv 
 ```
 
 ---
